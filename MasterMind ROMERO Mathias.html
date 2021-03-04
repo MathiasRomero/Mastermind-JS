@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>MasterMind</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="MasterM.js"></script>
+</head>
+<body>
+
+		<div id = "placepokeball">
+			<img id="pokeball" class="grow"src="Pokeball1.png" height="130px" style="cursor: pointer" onClick='jouer(1)' />
+			<img id="superball" class="grow"src="Superball1.png" height="130px" style="cursor: pointer" onClick='jouer(2)'/>
+			<img id="hyperball" class="grow"src="Hyperball1.png" height="130px" style="cursor: pointer" onClick='jouer(3)'/>
+			<img id="masterball" class="grow" src="Masterball1.png" height="130px" style="cursor: pointer" onClick='jouer(4)'/>
+			<img id="masterball" class="grow" src="Honorball1.png" height="130px" style="cursor: pointer" onClick='jouer(5)'/>
+		</div>
+
+		<div id = "validerDiv"><img id="valider" src="Completer.png" height="300px" style="cursor: pointer" onClick='valider()'></div>
+		<div id = "regles"><img src="regles.png" height="200px" style="cursor: pointer" onClick='regle(0)'></div>
+		<div id = "pikachu"><img src="original.gif" height="300px"></div>
+		<div id = "pidgey"><img src="pidgey.gif" height="300px"></div>
+		<div id = "grille"><img src="grille.png" height="900px"></div>
+		
+		<div id = "retour"><img id="retourimg" src="Retour.png" class="reduce" style="cursor: pointer" onClick="retour(); "></div>
+
+		<div id="ligne1">
+			<img id="c1" src="casevide.png" class="grow" height="70px" >
+			<img id="c2" src="casevide.png" class="grow" height="70px">
+			<img id="c3" src="casevide.png" class="grow" height="70px">
+			<img id="c4" src="casevide.png" class="grow" height="70px">
+		</div>
+
+		<div id="ligne2">
+			<img id="c5" src="casevide.png" class="grow"height="70px">
+			<img id="c6" src="casevide.png" class="grow" height="70px">
+			<img id="c7" src="casevide.png" class="grow" height="70px">
+			<img id="c8" src="casevide.png" class="grow" height="70px">
+		</div>
+
+		<div id="ligne3">
+			<img id="c9" src="casevide.png" class="grow" height="70px">
+			<img id="c10" src="casevide.png" class="grow" height="70px">
+			<img id="c11" src="casevide.png" class="grow"height="70px">
+			<img id="c12" src="casevide.png" class="grow"height="70px">
+		</div>
+
+		<div id="ligne4">
+			<img id="c13" src="casevide.png"class="grow" height="70px">
+			<img id="c14" src="casevide.png" class="grow"height="70px">
+			<img id="c15" src="casevide.png" class="grow"height="70px">
+			<img id="c16" src="casevide.png" class="grow"height="70px">
+		</div>
+
+		<div id="ligne5">
+			<img id="c17" src="casevide.png" class="grow" height="70px">
+			<img id="c18" src="casevide.png" class="grow"height="70px">
+			<img id="c19" src="casevide.png" class="grow"height="70px">
+			<img id="c20" src="casevide.png" class="grow"height="70px">
+		</div>
+
+		<div id="ligne6">
+			<img id="c21" src="casevide.png" class="grow" height="70px">
+			<img id="c22" src="casevide.png" class="grow"height="70px">
+			<img id="c23" src="casevide.png" class="grow"height="70px">
+			<img id="c24" src="casevide.png" class="grow" height="70px">
+		</div>
+
+		<div id="ligne7">
+			<img id="c25" src="casevide.png" class="grow"height="70px">
+			<img id="c26" src="casevide.png" class="grow"height="70px">
+			<img id="c27" src="casevide.png" class="grow"height="70px">
+			<img id="c28" src="casevide.png" class="grow"height="70px">
+		</div>
+
+		<div id="ligne8">
+			<img id="c29" src="blackBall.png" height="70px">
+			<img id="c30" src="blackBall.png" height="70px">
+			<img id="c31" src="blackBall.png" height="70px">
+			<img id="c32" src="blackBall.png" height="70px">
+		</div>
+
+
+		<div id="resultat1">
+			<img id="r1" src="noir.png" height="70px">
+			<img id="r2" src="noir.png" height="70px">
+			<img id="r3" src="noir.png" height="70px">
+			<img id="r4" src="noir.png" height="70px">
+		</div>
+
+		<div id="resultat2">
+			<img id="r5" src="noir.png" height="70px">
+			<img id="r6" src="noir.png" height="70px">
+			<img id="r7" src="noir.png" height="70px">
+			<img id="r8" src="noir.png" height="70px">
+		</div>
+
+		<div id="resultat3">
+			<img id="r9" src="noir.png" height="70px">
+			<img id="r10" src="noir.png" height="70px">
+			<img id="r11" src="noir.png" height="70px">
+			<img id="r12" src="noir.png" height="70px">
+		</div>
+
+		<div id="resultat4">
+			<img id="r13" src="noir.png" height="70px">
+			<img id="r14" src="noir.png" height="70px">
+			<img id="r15" src="noir.png" height="70px">
+			<img id="r16" src="noir.png" height="70px">
+		</div>
+
+		<div id="resultat5">
+			<img id="r17" src="noir.png" height="70px">
+			<img id="r18" src="noir.png" height="70px">
+			<img id="r19" src="noir.png" height="70px">
+			<img id="r20" src="noir.png" height="70px">
+		</div>
+
+		<div id="resultat6">
+			<img id="r21" src="noir.png" height="70px">
+			<img id="r22" src="noir.png" height="70px">
+			<img id="r23" src="noir.png" height="70px">
+			<img id="r24" src="noir.png" height="70px">
+		</div>
+
+		<div id="resultat7">
+			<img id="r25" src="noir.png" height="70px">
+			<img id="r26" src="noir.png" height="70px">
+			<img id="r27" src="noir.png" height="70px">
+			<img id="r28" src="noir.png" height="70px">
+		</div>
+
+
+	<div><img src="pokedexr.png"id = "pokedex" height="900px" onClick="regle(1)" style="cursor: pointer"></div>
+		<div id="indexmax"><img src="MenuTexte.png" height="1200px" onClick='lancement()'/></div>
+
+
+
+</body>
+</html>
